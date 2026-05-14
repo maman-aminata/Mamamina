@@ -41,15 +41,7 @@ if ($mot_cle !== '') {
     
     ?>
 <!DOCTYPE html>
-<html lang="fr"><?php
-if (!empty($projet["technologies"]) && is_array($projet["technologies"])) {
-    foreach ($projet["technologies"] as $tech) {
-        echo "<li>" . htmlspecialchars($tech) . "</li>";
-    }
-} else {
-    echo "<p>Aucune technologie renseignée pour ce projet.</p>";
-}
-?>
+<html lang="fr">
 
 
 <head>
@@ -63,7 +55,7 @@ if (!empty($projet["technologies"]) && is_array($projet["technologies"])) {
 <?php require 'composants/navigation.php'; ?>
  
 <main>
-<?php foreach ($projets as $projet) ?>    
+<?php foreach ($projets as $projet) ?> {
     <div class="carte-projet">
  <img src='<?= htmlspecialchars($projet["image"]) ?>'
         alt='<?= htmlspecialchars($projet["titre"]) ?>'>
@@ -117,7 +109,15 @@ if (!empty($projet["technologies"]) && is_array($projet["technologies"])) {
         conditions définies. Ce projet m’a permis de découvrir le fonctionnement des systèmes embarqués et d’interagir avec du
         matériel électronique de manière concrète..</p>
     </div>
-
+<?php
+if (!empty($projet["technologies"]) && is_array($projet["technologies"])) {
+    foreach ($projet["technologies"] as $tech) {
+        echo "<li>" . htmlspecialchars($tech) . "</li>";
+    }
+} else {
+    echo "<p>Aucune technologie renseignée pour ce projet.</p>";
+}
+?>
 </section>
 </main>
 <?php require 'composants/pied-de-page.php'; ?>
