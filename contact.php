@@ -44,9 +44,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <p class="success">Votre message a été envoyé avec succès !</p>
 <?php endif; ?>
         <form method="POST">
-            <input type="text" placeholder="Prénom" required>
-            <input type="text" placeholder="Nom" required>
-            <input type="email" placeholder="Email" required>
+            <input type="text" name="prenom" placeholder="Prénom" required>
+            <input type="text" name="nom" placeholder="Nom" required>
+            <input type="email" name="email" placeholder="Email" required>
             <select name="sujet" id="sujet">
                 <option value="">Sélectionnez un sujet</option>
                 <option value="information">Demande d'information</option>
@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <option value="autre">Autre</option>
             </select>
             
-            <textarea placeholder="Votre message..." rows="5" required></textarea>
+            <textarea name="message" placeholder="Votre message..." rows="5" required></textarea>
             <button type="submit">Envoyer</button>
         </form>
     </section>
@@ -72,15 +72,15 @@ if (isset($_POST['demande_projet'])) {
    ];
 }
 ?>
-    <form class="form-contact">
+    <form method="POST" class="form-contact">
     
-        <input type="text" placeholder="Votre nom" required>
+        <input type="text" name="nom" placeholder="Votre nom" required>
     
-        <input type="email" placeholder="Votre email" required>
+        <input type="email" name="email" placeholder="Votre email" required>
     
-        <input type="text" placeholder="Sujet du projet">
+        <input type="text" name="sujet" placeholder="Sujet du projet">
     
-        <textarea placeholder="Décrivez votre projet..." rows="5"></textarea>
+        <textarea name="description" placeholder="Décrivez votre projet..." rows="5"></textarea>
     
         <button type="submit">Envoyer</button>
     
