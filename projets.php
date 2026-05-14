@@ -79,14 +79,7 @@ if (!empty($projet["technologies"]) && is_array($projet["technologies"])) {
  <p>Aucun projet ne correspond à ta recherche.</p>
 <?php endif; ?>
 }
-    <header>
-        <div class="search-bar">
-            <input type="text" placeholder="🔍 Rechercher...">
-        </div>
-        <h1>Mes Projets</h1>
-
-    </header>
-
+   
     <h2>Rechercher un projet</h2>
     
     <form class="search-form">
