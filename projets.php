@@ -84,12 +84,7 @@ if (!empty($projet["technologies"]) && is_array($projet["technologies"])) {
             <input type="text" placeholder="🔍 Rechercher...">
         </div>
         <h1>Mes Projets</h1>
-        <nav>
-            <a href="index.php">Accueil</a>
-            <a href="about.php">À propos</a>
-            <a href="projets.php">Projets</a>
-            <a href="contact.php">Contact</a>
-        </nav>
+
     </header>
 
     <h2>Rechercher un projet</h2>

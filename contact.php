@@ -1,3 +1,4 @@
+//http://localhost/PHP/Exam-Portfolio2/
 <?php require'fonctions.php';
 $erreurs  = [];
 $succes   = false;
@@ -43,12 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <input type="text" placeholder="🔍 Rechercher...">
         </div>
         <h1>Contact</h1>
-        <nav>
-            <a href="index.php">Accueil</a>
-            <a href="about.php">À propos</a>
-            <a href="projets.php">Projets</a>
-            <a href="contact.php">Contact</a>
-        </nav>
+
     </header>
 
     <section class="center">

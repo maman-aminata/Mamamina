@@ -10,6 +10,13 @@
 
 <body>
 
+    <header>
+        <div class="search-bar">
+            <input type="text" placeholder="🔍 Rechercher...">
+        </div>
+        <h1>À propos</h1>
+    </header>
+
     <section class="center">
         <img src="images/about_photo.jpeg" class="ma_photo">
 
