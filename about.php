@@ -9,7 +9,7 @@
 </head>
 
 <body>
-
+<?php require 'composants/navigation.php'; ?>
     <header>
         <div class="search-bar">
             <input type="text" placeholder="🔍 Rechercher...">
