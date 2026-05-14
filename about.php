@@ -16,10 +16,10 @@
         </div>
         <h1>À propos</h1>
         <nav>
-            <a href="index.html">Accueil</a>
-            <a href="about.html">À propos</a>
-            <a href="projets.html">Projets</a>
-            <a href="contact.html">Contact</a>
+            <a href="index.php">Accueil</a>
+            <a href="about.php">À propos</a>
+            <a href="projets.php">Projets</a>
+            <a href="contact.php">Contact</a>
         </nav>
     </header>
 

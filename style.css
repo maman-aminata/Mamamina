@@ -516,3 +516,28 @@ footer p {
     }
     
 }
+body{
+    font-family: Arial;
+}
+
+nav{
+    background:black;
+    padding:20px;
+}
+
+nav a{
+    color:white;
+    margin-right:20px;
+    text-decoration:none;
+}
+
+.actif{
+    color:gold;
+}
+
+footer{
+    background:black;
+    color:white;
+    padding:20px;
+    margin-top:40px;
+}

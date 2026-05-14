@@ -10,16 +10,20 @@
 
 <body>
 
+<?php require 'composants/navigation.php'; ?>
+ 
+<main>
+
     <header>
         <div class="search-bar">
             <input type="text" placeholder="🔍 Rechercher...">
         </div>
         <h1>Maman Aminata Niane</h1>
         <nav>
-            <a href="index.html">Accueil</a>
-            <a href="about.html">À propos</a>
-            <a href="projets.html">Projets</a>
-            <a href="contact.html">Contact</a>
+            <a href="index.php">Accueil</a>
+            <a href="about.php">À propos</a>
+            <a href="projets.php">Projets</a>
+            <a href="contact.php">Contact</a>
         </nav>
     </header>
 
@@ -31,9 +35,9 @@
         <a href="CV.pdf" class="btn" target="_blank">Voir mon CV</a>
     </section>
 
-</body>
-<footer>
-    <p>&copy; 2026 Maman Aminata Niane. Tous droits réservés.</p>
-</footer>
+    </main>
+ 
+<?php require 'composants/pied-de-page.php'; ?>
 
+</body>
 </html>

@@ -1,3 +1,30 @@
+<?php require'fonctions.php';
+$erreurs  = [];
+$succes   = false;
+$prenom   = '';
+$nom      = '';
+$email    = '';
+$message  = '';
+$succes = false;
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+   $prenom = nettoyer($_POST['prenom'] ?? '');
+   $nom     = nettoyer($_POST['nom']     ?? '');
+   $email   = nettoyer($_POST['email']   ?? '');
+   $message = nettoyer($_POST['message'] ?? '');
+ 
+   if (!champ_requis($prenom)){  $erreurs[] = 'Le prénom est obligatoire.';}
+   if (!champ_requis($nom))     {$erreurs[] = 'Le nom est obligatoire.';}
+   if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
+                                $erreurs[] = 'L\'adresse e-mail est invalide.';}
+   if (!champ_requis($message)) {$erreurs[] = 'Le message ne peut pas être vide.';}
+ 
+   if (empty($erreurs)) {
+       $succes = true;
+   }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -8,25 +35,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-
+<body>    
+<?php require 'composants/navigation.php'; ?>
+<main>
     <header>
         <div class="search-bar">
             <input type="text" placeholder="🔍 Rechercher...">
         </div>
         <h1>Contact</h1>
         <nav>
-            <a href="index.html">Accueil</a>
-            <a href="about.html">À propos</a>
-            <a href="projets.html">Projets</a>
-            <a href="contact.html">Contact</a>
+            <a href="index.php">Accueil</a>
+            <a href="about.php">À propos</a>
+            <a href="projets.php">Projets</a>
+            <a href="contact.php">Contact</a>
         </nav>
     </header>
 
     <section class="center">
         <h2>Contactez-moi</h2>
-
-        <form>
+<?php if ($succes): ?>
+    <p class="success">Votre message a été envoyé avec succès !</p>
+<?php endif; ?>
+        <form method="POST">
             <input type="text" placeholder="Prénom" required>
             <input type="text" placeholder="Nom" required>
             <input type="email" placeholder="Email" required>
@@ -44,6 +74,17 @@
 
 
     <h2>Demande de projet</h2>
+    <?php
+if (isset($_POST['demande_projet'])) {
+   $demande = [
+       'nom'         => nettoyer($_POST['nom']         ?? ''),
+       'email'       => nettoyer($_POST['email']       ?? ''),
+       'type_projet' => nettoyer($_POST['type_projet'] ?? ''),
+       'description' => nettoyer($_POST['description'] ?? ''),
+       'budget'      => nettoyer($_POST['budget']      ?? ''),
+   ];
+}
+?>
     <form class="form-contact">
     
         <input type="text" placeholder="Votre nom" required>
@@ -64,7 +105,8 @@
     <p><Address>Zac Mbao,cité Sagef</Address></p>
   
 
-
+</main>
+<?php require 'composants/pied-de-page.php'; ?>
 </body>
 <footer>
 
@@ -80,7 +122,6 @@
     
     </div>
 
-    <p>&copy; 2026 Maman Aminata Niane. Tous droits réservés.</p>
-</footer>
+  </footer> 
 
 </html>
