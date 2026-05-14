@@ -89,7 +89,7 @@ if ($mot_cle !== '') {
 
     <p><?= htmlspecialchars($projet['description']) ?></p>
 
-    <div class='technologies'>
+    <div class='card'>
 
         <?php foreach ($projet['technologies'] as $tech) : ?>
 
