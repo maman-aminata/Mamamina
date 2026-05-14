@@ -32,21 +32,25 @@ $projets = [
 
 $mot_cle = nettoyer($_GET['recherche'] ?? '');
 $resultats = [];
-
 if ($mot_cle !== '') {
-    foreach ($projets as $projet) {
-        if (stripos($projet['titre'], $mot_cle) !== false ||
-            stripos($projet['description'], $mot_cle) !== false) {
-            $resultats[] = $projet;
+        foreach ($projets as $projet) {
+            if (stripos($projet['titre'], $mot_cle) !== false ||
+                stripos($projet['description'], $mot_cle) !== false) {
+                $resultats[] = $projet;
+            }
+                if (is_array($projet['technologies'])) {
+                    foreach ($projet['technologies'] as $tech) {
+                        if (stripos($tech, $mot_cle) !== false) {
+                            $resultats[] = $projet;
+                            break;
+                        }
+                    }
+                }
         }
-    }
-} else {
-    $resultats = $projets;
-}
-?>
-
+    }else { $resultats = $projets;} 
+    
+    ?>
 <!DOCTYPE html>
-
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -54,12 +58,11 @@ if ($mot_cle !== '') {
     <title>Projets</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-
 <?php require 'composants/navigation.php'; ?>
-
-<main>
-
+ 
+<main></main>
 <h2>Rechercher un projet</h2>
 
 <form method="GET" action="projets.php" class="search-form">
