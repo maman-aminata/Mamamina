@@ -76,9 +76,9 @@ if ($mot_cle !== '') {
     <button type="submit">Rechercher</button>
 
 </form>
-
-<?php foreach ($resultats as $projet) : ?>
 <section class="grid">
+<?php foreach ($resultats as $projet) : ?>
+
   
 <div class="card">
 
@@ -89,7 +89,7 @@ if ($mot_cle !== '') {
 
     <p><?= htmlspecialchars($projet['description']) ?></p>
 
-    <div class='card'>
+    <div class='technologies'>
 
         <?php foreach ($projet['technologies'] as $tech) : ?>
 
