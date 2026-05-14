@@ -39,14 +39,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>    
 <?php require 'composants/navigation.php'; ?>
 <main>
-    <header>
-        <div class="search-bar">
-            <input type="text" placeholder="🔍 Rechercher...">
-        </div>
-        <h1>Contact</h1>
-
-    </header>
-
     <section class="center">
         <h2>Contactez-moi</h2>
 <?php if ($succes): ?>
