@@ -110,16 +110,6 @@ if ($mot_cle !== '') {
 
 <?php endif; ?>
 
-</main>
-   
-    <h2>Rechercher un projet</h2>
-    
-    <form method="GET" accept="projets.php" class="search-form">
-    
-        <input type="text" placeholder="Rechercher par mot-clé...">
-    
-        <button type="submit">Rechercher</button>
-    
     </form>
 
 <section class="grid">
