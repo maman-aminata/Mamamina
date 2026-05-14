@@ -27,21 +27,9 @@ $resultats = [];
 
 if ($mot_cle !== '') {
     foreach ($projets as $projet) {
-        $dejaDans = false;
-
         if (stripos($projet['titre'], $mot_cle) !== false ||
             stripos($projet['description'], $mot_cle) !== false) {
             $resultats[] = $projet;
-            $dejaDans = true;
-        }
-
-        if (!$dejaDans && is_array($projet['technologies'])) {
-            foreach ($projet['technologies'] as $tech) {
-                if (stripos($tech, $mot_cle) !== false) {
-                    $resultats[] = $projet;
-                    break;
-                }
-            }
         }
     }
 } else {
