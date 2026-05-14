@@ -63,22 +63,54 @@ if ($mot_cle !== '') {
 <?php require 'composants/navigation.php'; ?>
  
 <main>
-<?php foreach ($resultats as $projet) ?> {
-    <div class="carte-projet">
- <img src='<?= htmlspecialchars($projet["image"]) ?>'
-        alt='<?= htmlspecialchars($projet["titre"]) ?>'>
-   <h3><?= htmlspecialchars($projet['titre']) ?></h3>
-   <p><?= htmlspecialchars($projet['description']) ?></p>
-   <div class='technologies'>
-     <?php foreach ($projet['technologies'] as $tech) : ?>
-       <span class='badge'><?= htmlspecialchars($tech) ?></span>
-     <?php endforeach; ?>
-   </div>
- </div>
+
+<h2>Rechercher un projet</h2>
+
+<form method="GET" action="projets.php" class="search-form">
+
+    <input
+    type="text"
+    name="recherche"
+    placeholder="Rechercher par mot-clé...">
+
+    <button type="submit">Rechercher</button>
+
+</form>
+
+<?php foreach ($resultats as $projet) : ?>
+
+<div class="carte-projet">
+
+    <img src='<?= htmlspecialchars($projet["image"]) ?>'
+    alt='<?= htmlspecialchars($projet["titre"]) ?>'>
+
+    <h3><?= htmlspecialchars($projet['titre']) ?></h3>
+
+    <p><?= htmlspecialchars($projet['description']) ?></p>
+
+    <div class='technologies'>
+
+        <?php foreach ($projet['technologies'] as $tech) : ?>
+
+            <span class='badge'>
+                <?= htmlspecialchars($tech) ?>
+            </span>
+
+        <?php endforeach; ?>
+
+    </div>
+
+</div>
+
+<?php endforeach; ?>
+
 <?php if (empty($resultats)) : ?>
- <p>Aucun projet ne correspond à ta recherche.</p>
+
+<p>Aucun projet ne correspond à ta recherche.</p>
+
 <?php endif; ?>
-}
+
+</main>
    
     <h2>Rechercher un projet</h2>
     
