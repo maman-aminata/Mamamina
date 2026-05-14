@@ -7,14 +7,16 @@ $projets = [
         manipulations de données. L’objectif était de mettre en pratique les notions de base en programmation, comme les
         variables, les opérations et l’affichage des résultats. Ce travail m’a permis de renforcer ma logique et de mieux
         comprendre le fonctionnement d’un programme simple.',
-        'image' => 'images/projet1.png'
+        'image' => 'images/projet1.png',
+        'technologies' => ['Java', 'Eclipse']
     ],
     [
         'titre' => 'Projet MySQL (Création de table)',
         'description' => ' Ce projet consiste à créer et manipuler une base de données avec MySQL, notamment à travers la création d’une table.
         J’ai utilisé des requêtes SQL comme CREATE TABLE pour définir la structure des données. Ce projet m’a permis de
         comprendre les bases de la gestion de données et l’organisation d’une base de données relationnelle.',
-        'image' => 'images/projet3.jpeg'
+        'image' => 'images/projet3.jpeg',
+        'technologies' => ['MySQL', 'SQL']
     ],
     [
         'titre' => 'Projet Arduino (Allumage de lampes)',
@@ -22,7 +24,8 @@ $projets = [
         l’utilisation de composants électroniques et la programmation du microcontrôleur pour contrôler les sorties selon des
         conditions définies. Ce projet m’a permis de découvrir le fonctionnement des systèmes embarqués et d’interagir avec du
         matériel électronique de manière concrète..',
-        'image' => 'images/projet4.png'
+        'image' => 'images/projet4.png',
+        'technologies' => ['Arduino']
     ]
 ];
 $mot_cle = nettoyer($_GET['recherche'] ?? '');
@@ -35,9 +38,19 @@ if ($mot_cle !== '') {
             }
         }
     }else { $resultats = $projets;} 
+    
     ?>
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr"><?php
+if (!empty($projet["technologies"]) && is_array($projet["technologies"])) {
+    foreach ($projet["technologies"] as $tech) {
+        echo "<li>" . htmlspecialchars($tech) . "</li>";
+    }
+} else {
+    echo "<p>Aucune technologie renseignée pour ce projet.</p>";
+}
+?>
+
 
 <head>
     <meta charset="UTF-8">
@@ -50,7 +63,7 @@ if ($mot_cle !== '') {
 <?php require 'composants/navigation.php'; ?>
  
 <main>
-foreach ($projets as $projet) {
+<?php foreach ($projets as $projet) ?>    
     <div class="carte-projet">
  <img src='<?= htmlspecialchars($projet["image"]) ?>'
         alt='<?= htmlspecialchars($projet["titre"]) ?>'>
