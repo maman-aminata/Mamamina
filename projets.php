@@ -124,31 +124,6 @@ if ($mot_cle !== '') {
 
 <section class="grid">
 
-    <div class="card">
-        <img src="images/projet1.png">
-        <h3>Projet Eclipse (Conversion / Exercices)</h3>
-        <p>Ce projet réalisé sur Eclipse consistait à effectuer des exercices de programmation, notamment des conversions et
-        manipulations de données. L’objectif était de mettre en pratique les notions de base en programmation, comme les
-        variables, les opérations et l’affichage des résultats. Ce travail m’a permis de renforcer ma logique et de mieux
-        comprendre le fonctionnement d’un programme simple.</p>
-    </div>
-
-    <div class="card">
-        <img src="images/projet3.jpeg">
-        <h3>Projet MySQL (Création de table)</h3>
-        <p> Ce projet consiste à créer et manipuler une base de données avec MySQL, notamment à travers la création d’une table.
-        J’ai utilisé des requêtes SQL comme CREATE TABLE pour définir la structure des données. Ce projet m’a permis de
-        comprendre les bases de la gestion de données et l’organisation d’une base de données relationnelle.</p>
-    </div>
-
-    <div class="card">
-        <img src="images/projet4.png">
-        <h3>Projet Arduino (Allumage de lampes)</h3>
-        <p>Ce projet consiste à programmer un système avec Arduino permettant d’allumer et d’éteindre des lampes. Il repose sur
-        l’utilisation de composants électroniques et la programmation du microcontrôleur pour contrôler les sorties selon des
-        conditions définies. Ce projet m’a permis de découvrir le fonctionnement des systèmes embarqués et d’interagir avec du
-        matériel électronique de manière concrète..</p>
-    </div>
 <?php
 if (!empty($projet["technologies"]) && is_array($projet["technologies"])) {
     foreach ($projet["technologies"] as $tech) {
