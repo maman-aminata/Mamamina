@@ -80,7 +80,7 @@ if ($mot_cle !== '') {
 <?php foreach ($resultats as $projet) : ?>
 <section class="grid">
   
-<div class="carte-projet">
+<div class="card">
 
     <img src='<?= htmlspecialchars($projet["image"]) ?>'
     alt='<?= htmlspecialchars($projet["titre"]) ?>'>
