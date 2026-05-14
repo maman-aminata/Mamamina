@@ -52,7 +52,6 @@ if ($mot_cle !== '') {
 
 <main>
 
-```
 <h2>Rechercher un projet</h2>
 
 <form method="GET" action="projets.php" class="search-form">
@@ -80,7 +79,6 @@ if ($mot_cle !== '') {
         <?php endforeach; ?>
     </section>
 <?php endif; ?>
-```
 
 </main>
 
