@@ -36,6 +36,14 @@ if ($mot_cle !== '') {
                 stripos($projet['description'], $mot_cle) !== false) {
                 $resultats[] = $projet;
             }
+                if (is_array($projet['technologies'])) {
+                    foreach ($projet['technologies'] as $tech) {
+                        if (stripos($tech, $mot_cle) !== false) {
+                            $resultats[] = $projet;
+                            break;
+                        }
+                    }
+                }
         }
     }else { $resultats = $projets;} 
     
