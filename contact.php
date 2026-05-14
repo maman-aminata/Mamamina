@@ -96,7 +96,6 @@ if (isset($_POST['demande_projet'])) {
 </main>
 <?php require 'composants/pied-de-page.php'; ?>
 </body>
-<footer>
 
     <div class="socials">
         <h2>Réseaux sociaux</h2>
@@ -110,6 +109,5 @@ if (isset($_POST['demande_projet'])) {
     
     </div>
 
-  </footer> 
 
 </html>
