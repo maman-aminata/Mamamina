@@ -78,7 +78,8 @@ if ($mot_cle !== '') {
 </form>
 
 <?php foreach ($resultats as $projet) : ?>
-
+<section class="grid">
+  
 <div class="carte-projet">
 
     <img src='<?= htmlspecialchars($projet["image"]) ?>'
@@ -103,7 +104,7 @@ if ($mot_cle !== '') {
 </div>
 
 <?php endforeach; ?>
-
+</section>
 <?php if (empty($resultats)) : ?>
 
 <p>Aucun projet ne correspond à ta recherche.</p>
