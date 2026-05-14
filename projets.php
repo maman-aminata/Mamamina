@@ -110,20 +110,6 @@ if ($mot_cle !== '') {
 
 <?php endif; ?>
 
-    </form>
-
-<section class="grid">
-
-<?php
-if (!empty($projet["technologies"]) && is_array($projet["technologies"])) {
-    foreach ($projet["technologies"] as $tech) {
-        echo "<li>" . htmlspecialchars($tech) . "</li>";
-    }
-} else {
-    echo "<p>Aucune technologie renseignée pour ce projet.</p>";
-}
-?>
-</section>
 </main>
 <?php require 'composants/pied-de-page.php'; ?>
 </body>
