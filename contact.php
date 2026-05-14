@@ -92,11 +92,7 @@ if (isset($_POST['demande_projet'])) {
     <p>Telephone:+221 70 506 38 07</p>
     <p><Address>Zac Mbao,cité Sagef</Address></p>
   
-
-</main>
-<?php require 'composants/pied-de-page.php'; ?>
-</body>
-
+<footer>
     <div class="socials">
         <h2>Réseaux sociaux</h2>
         <a href="https://www.instagram.com/n.maaminata?igsh=aXNidTNzM2w1MDZu&utm_source=qr"><img
@@ -108,6 +104,10 @@ if (isset($_POST['demande_projet'])) {
                 width="50px"></a>
     
     </div>
+</footer>
+</main>
+<?php require 'composants/pied-de-page.php'; ?>
+</body>
 
 
 </html>
