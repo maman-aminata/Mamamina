@@ -13,15 +13,6 @@
 <?php require 'composants/navigation.php'; ?>
  
 <main>
-
-    <header>
-        <div class="search-bar">
-            <input type="text" placeholder="🔍 Rechercher...">
-        </div>
-        <h1>Maman Aminata Niane</h1>
-
-    </header>
-
     <section class="hero">
         <img src="images/ma_photo.jpeg" class="ma_photo">
         <h2>Etudiante en Génie logiciel et Administration réseau</h2>
