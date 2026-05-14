@@ -1,4 +1,3 @@
-//http://localhost/PHP/Exam-Portfolio2/
 <?php require'fonctions.php';
 $erreurs  = [];
 $succes   = false;
