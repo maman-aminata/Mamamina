@@ -2,6 +2,7 @@
 $page_courante = basename($_SERVER['PHP_SELF']);
 ?>
 <nav>
+  <input type="text"  placeholder="🔍Rechercher..." class="search-bar">
   <a href='index.php'
     <?php if ($page_courante === 'index.php') echo 'class="actif"'; ?>>
     Accueil
