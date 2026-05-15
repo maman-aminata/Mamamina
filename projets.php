@@ -30,7 +30,6 @@ $projets = [
 ];
 
 
-// --- Filtrage par mot-clé ---
 $mot_cle = nettoyer($_GET['recherche'] ?? '');
 $resultats = [];
 
