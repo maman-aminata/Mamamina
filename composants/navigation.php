@@ -2,11 +2,11 @@
 $page_courante = basename($_SERVER['PHP_SELF']);
 ?>
 <header>
-    <h1>Mon Portfolio</h1>
+   
   <div class="nav-search">
     <input type="text" class="search-bar" placeholder="Rechercher...">
   </div>
-  
+   <h1>Mon Portfolio</h1>
   <nav>
     <a href='index.php' <?php if ($page_courante === 'index.php') echo 'class="actif"'; ?>>Accueil</a>
     <a href='about.php' <?php if ($page_courante === 'about.php') echo 'class="actif"'; ?>>À propos</a>
