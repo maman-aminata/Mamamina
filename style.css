@@ -20,14 +20,19 @@ body {
 }
 
 .nav-search {
-    flex: 1;
+    width: 250px;
 }
 
 .search-bar {
     width: 100%;
-    padding: 12px;
+    padding: 10px 15px;
     border-radius: 20px;
     border: none;
+}
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .nav-links {
@@ -46,13 +51,6 @@ body {
     color: #38bdf8;
 }
 
-nav a {
-    margin-left: 15px;
-    text-decoration: none;
-    color: white;
-    transition: 0.3s;
-}
-
 nav a:hover {
     color: #38bdf8;
 }
@@ -62,7 +60,6 @@ nav a:hover {
     padding: 80px 20px;
 }
 
-/* PHOTO WOW */
 .ma_photo {
     width: 150px;
     height: 150px;
@@ -540,6 +537,3 @@ footer p {
         padding-left: 30px;
     }
     
-body{
-    font-family: Arial;
-}
