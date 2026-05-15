@@ -492,25 +492,42 @@ footer p {
     color: white;
 }
 
-
 @media screen and (max-width: 768px) {
+
     header {
         flex-direction: column;
         text-align: center;
         align-items: center;
         padding: 10px 0;
-        .hero_text {
-            max-width: 100%;
-        }
-        .hero_photo {
-           margin: 20px ;
     }
-    nav ul li{
+
+    .hero_text {
+        max-width: 100%;
+    }
+
+    .hero_photo {
+        margin: 20px;
+    }
+
+    nav ul li {
         display: block;
         margin: 10px 0;
         margin-right: 20px;
     }
+
+    .timeline {
+        padding-left: 50px;
+    }
+
+    .timeline::before {
+        left: 10px;
+    }
+
+    .timeline-item {
+        padding-left: 30px;
+    }
 }
+
     .timeline {
         padding-left: 50px;
     }
@@ -523,18 +540,6 @@ footer p {
         padding-left: 30px;
     }
     
-}
 body{
     font-family: Arial;
-}
-
-nav{
-    background:black;
-    padding:20px;
-}
-
-nav a{
-    color:white;
-    margin-right:20px;
-    text-decoration:none;
 }
