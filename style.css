@@ -22,14 +22,20 @@ header {
     top: 0;
 
     
-    
-    
+
         .search-bar input {
             width: 100%;
             padding: 10px;
             border-radius: 20px;
         }
-    .search-bar {
+
+    
+        .main {
+            margin-left: 220px;
+            padding: 40px;
+        }
+}
+.search-bar {
   width: 160px;
   padding: 5px 8px;
   font-size: 0.85em;
@@ -37,13 +43,6 @@ header {
   border: 1px solid #ccc;
   margin-right: 10px;
 }
-    
-        .main {
-            margin-left: 220px;
-            padding: 40px;
-        }
-}
-
 nav a {
     margin-left: 15px;
     text-decoration: none;
