@@ -10,7 +10,7 @@ body {
     color: white;
 }
 
-header {
+nav {
     display: flex;
     justify-content: space-between;
     padding: 20px;
