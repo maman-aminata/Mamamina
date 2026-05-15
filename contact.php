@@ -1,3 +1,4 @@
+<?php require 'composants/navigation.php'; ?>
 <?php require'fonctions.php';
 $erreurs  = [];
 $succes   = false;
@@ -36,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 
 <body>    
-<?php require 'composants/navigation.php'; ?>
+
 <main>
     <section class="center">
         <h2>Contactez-moi</h2>

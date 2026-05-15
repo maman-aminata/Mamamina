@@ -1,3 +1,4 @@
+<?php require 'composants/navigation.php'; ?>
 <?php
 require 'fonctions.php';
 $projets = [
@@ -66,7 +67,7 @@ if ($mot_cle !== '') {
 </head>
 
 <body>
-<?php require 'composants/navigation.php'; ?>
+
  
 <main>
 
