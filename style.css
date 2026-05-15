@@ -10,32 +10,41 @@ body {
     color: white;
 }
 
-header {
+.navbar {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);
-    display: flex;
-   position: sticky;
-   z-index: 1000;
-    top: 0;
-
-    
-
-        .search-bar {
-            width: 100%;
-            padding: 10px;
-            border-radius: 20px;
-        }
-
-    
-        .main {
-            margin-left: 220px;
-            padding: 40px;
-        }
+    align-items: center;
+    background: black;
+    padding: 15px 20px;
+    gap: 20px;
 }
 
+.nav-search {
+    flex: 1;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 12px;
+    border-radius: 20px;
+    border: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
 
 nav a {
     margin-left: 15px;
