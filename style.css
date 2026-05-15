@@ -530,14 +530,3 @@ nav a{
     margin-right:20px;
     text-decoration:none;
 }
-
-.actif{
-    color:rgb(40, 144, 175);
-}
-
-footer{
-    background:black;
-    color:white;
-    padding:20px;
-    margin-top:40px;
-}
