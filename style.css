@@ -10,7 +10,7 @@ body {
     color: white;
 }
 
-nav {
+header {
     display: flex;
     justify-content: space-between;
     padding: 20px;
@@ -29,7 +29,14 @@ nav {
             padding: 10px;
             border-radius: 20px;
         }
-    
+    .search-bar {
+  width: 160px;
+  padding: 5px 8px;
+  font-size: 0.85em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
     
         .main {
             margin-left: 220px;
