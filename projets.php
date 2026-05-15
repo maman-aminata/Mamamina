@@ -28,26 +28,33 @@ $projets = [
         'technologies' => ['Arduino']
     ]
 ];
+
+
+// --- Filtrage par mot-clé ---
 $mot_cle = nettoyer($_GET['recherche'] ?? '');
 $resultats = [];
+
 if ($mot_cle !== '') {
-        foreach ($projets as $projet) {
-            if (stripos($projet['titre'], $mot_cle) !== false ||
-                stripos($projet['description'], $mot_cle) !== false) {
-                $resultats[] = $projet;
-            }
-                if (is_array($projet['technologies'])) {
-                    foreach ($projet['technologies'] as $tech) {
-                        if (stripos($tech, $mot_cle) !== false) {
-                            $resultats[] = $projet;
-                            break;
-                        }
-                    }
+    foreach ($projets as $projet) {
+        if (
+            stripos($projet['titre'], $mot_cle) !== false ||
+            stripos($projet['description'], $mot_cle) !== false
+        ) {
+            $resultats[] = $projet;
+        } else {
+            // Recherche aussi dans les technologies
+            foreach ($projet['technologies'] as $tech) {
+                if (stripos($tech, $mot_cle) !== false) {
+                    $resultats[] = $projet;
+                    break;
                 }
+            }
         }
-    }else { $resultats = $projets;} 
-    
-    ?>
+    }
+} else {
+    $resultats = $projets;
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
