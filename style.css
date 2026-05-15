@@ -30,7 +30,6 @@ header {
     font-size: 0.9em;   /* texte plus petit */
     border-radius: 20px;
     border: 1px solid #ccc;
-    margin-left: 20px;
 }
         }
     
@@ -39,7 +38,11 @@ header {
             margin-left: 220px;
             padding: 40px;
         }
-
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 nav a {
     margin-left: 15px;
     text-decoration: none;
