@@ -23,7 +23,7 @@ header {
 
     
 
-        .search-bar input {
+        .search-bar {
             width: 100%;
             padding: 10px;
             border-radius: 20px;
@@ -35,14 +35,8 @@ header {
             padding: 40px;
         }
 }
-.search-bar {
-  width: 160px;
-  padding: 5px 8px;
-  font-size: 0.85em;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  margin-right: 10px;
-}
+
+
 nav a {
     margin-left: 15px;
     text-decoration: none;
