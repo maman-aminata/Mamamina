@@ -24,10 +24,13 @@ header {
     
     
     
-        .search-bar input {
-            width: 100%;
-            padding: 10px;
-            border-radius: 20px;
+    .search-bar {
+    width: 180px;       /* largeur réduite */
+    padding: 6px 8px;   /* espace intérieur */
+    font-size: 0.9em;   /* texte plus petit */
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
         }
     
     
